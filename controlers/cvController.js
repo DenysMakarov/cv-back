@@ -31,7 +31,7 @@ class CvController {
     downloadFile(req, res) {
         const { filename } = req.params;
         console.log(filename)
-        const filePath = path.join(__dirname, '../uploads', 'denys_makarov_cv.pdf');
+        const filePath = path.join(__dirname, '../uploads', filename);
 
         console.log(filePath)
         fs.readFile(filePath, (err, data) => {
